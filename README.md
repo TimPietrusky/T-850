@@ -4,7 +4,7 @@ Just a simple <a href="https://github.com/TimPietrusky/T-850" target="_blank">ex
 
 ## Public Beta
 
-[t-850.com](http://t-850.com)
+[t-850.com](http://www.t-850.com)
 
 Please help me find bugs and stuff!
 
