@@ -105,8 +105,6 @@
       // Render the template
       var template = this.template(this.model.toJSON());
 
-      // $('body').append('<script src="http://use.edgefonts.net/'+this.model.get("name")+'.js"></script>');
-
       // Change attributes of $el
       this.$el.attr('id', this.model.get('name'));
       this.$el.attr('data-high', '2');
@@ -257,9 +255,6 @@
 
     initialize : function() {
       vent.bind("collectionChanged", this.create, this);
-      // this.collection.each(function(model) {
-      //   model.on('change:title', this.create, this);
-      // }, this);
     },
 
     create : function(collection) {
@@ -287,47 +282,17 @@
 
       }, this);
 
-      // content += "\n\nIf you want to use this on CodePen, you have to add every font on their own and not as a group. \n";
-
       url_start += url_end;
       content += "}\n\n";
 
-      this.$el.html(url_start + content);
+      // No fonts in collection
+      if (collection.models.length == 0) {
+        this.$el.html("Add fonts to your collection!\n\n");
 
-      // var url = "@import url(<span class=\"url\">http://weloveiconfonts.com/api/?family=",
-      //     link = "&lt;link href='http://weloveiconfonts.com/api/?family='",
-      //     body = "",
-      //     count = 0,
-      //     count_added = 0;
-
-      // this.collection.each(function(model) {
-      //   if (model.get('selected')) {
-      //     if (count++ > 0) {
-      //       url += "|";
-      //     }
-      //     url += model.get('family');
-
-      //     body += "<span>/* " + model.get('family') + " */</span>\n"+
-      //       "[class*=\"" + model.get('family') + "-\"]:before {"+
-      //       "\n  <span class=\"css\">font-family: '" + model.get('font') + "', sans-serif;</span>"+
-      //       "\n}\n\n";
-
-      //   } else {
-      //     ++count_added;
-      //   }
-      // }, this);
-
-      // url += "</span>);\n\n";
-      // link += "\n\ rel='stylesheet' type='text/css'>";
-
-      // // Set the default pro tip when all collection are removed
-      // if (count_added == this.collection.length) {
-      //   url = "";
-      //   body = "Pro tip: Select some icon fonts to the see real output here!\n\n";
-      // }
-
-      // // URL
-      // this.$el.html(url + body);
+      // One or more fonts in collection
+      } else {
+        this.$el.html(url_start + content);
+      }
     },
 
     render : function() {
@@ -339,61 +304,61 @@
 
 
   var fontsCollection = new App.Collections.Fonts([
-{name : 'abril-fatface'},
-{name : 'acme'},
-{name : 'alegreya-sc'},
-{name : 'alegreya'},
-{name : 'alexa-std'},
-{name : 'amaranth'},
-{name : 'andika'},
-{name : 'anonymous-pro'},
-{name : 'arvo'},
-{name : 'asap'},
-{name : 'berkshire-swash'},
-{name : 'bree-serif'},
-{name : 'brush-script-std'},
-{name : 'chunk'},
-{name : 'cousine'},
-{name : 'crete-round'},
-{name : 'droid-sans-mono'},
-{name : 'droid-sans'},
-{name : 'droid-serif'},
-{name : 'ewert'},
-{name : 'fusaka-std'},
-{name : 'gentium-basic'},
-{name : 'gentium-book-basic'},
-{name : 'giddyup-std'},
-{name : 'gravitas-one'},
-{name : 'hobo-std'},
-{name : 'holtwood-one-sc'},
-{name : 'imprima'},
-{name : 'inconsolata'},
-{name : 'inika'},
-{name : 'istok-web'},
-{name : 'jim-nightshade'},
-{name : 'josefin-slab'},
-{name : 'kameron'},
-{name : 'kaushan-script'},
-{name : 'kotta-one'},
-{name : 'krona-one'},
-{name : 'la-belle-aurore'},
-{name : 'lato'},
-{name : 'league-gothic'},
-{name : 'lekton'},
-{name : 'linden-hill'},
-{name : 'lobster-two'},
-{name : 'lobster'},
-{name : 'lusitana'},
-{name : 'm-1c'},
-{name : 'm-1m'},
-{name : 'marck-script'},
-{name : 'marvel'},
-{name : 'maven-pro'},
-{name : 'merienda-one'},
-{name : 'merriweather'},
-{name : 'mr-bedfort'},
-{name : 'mr-de-haviland'},
-{name : 'mrs-saint-delafield'}
+    {name : 'abril-fatface'},
+    {name : 'acme'},
+    {name : 'alegreya-sc'},
+    {name : 'alegreya'},
+    {name : 'alexa-std'},
+    {name : 'amaranth'},
+    {name : 'andika'},
+    {name : 'anonymous-pro'},
+    {name : 'arvo'},
+    {name : 'asap'},
+    {name : 'berkshire-swash'},
+    {name : 'bree-serif'},
+    {name : 'brush-script-std'},
+    {name : 'chunk'},
+    {name : 'cousine'},
+    {name : 'crete-round'},
+    {name : 'droid-sans-mono'},
+    {name : 'droid-sans'},
+    {name : 'droid-serif'},
+    {name : 'ewert'},
+    {name : 'fusaka-std'},
+    {name : 'gentium-basic'},
+    {name : 'gentium-book-basic'},
+    {name : 'giddyup-std'},
+    {name : 'gravitas-one'},
+    {name : 'hobo-std'},
+    {name : 'holtwood-one-sc'},
+    {name : 'imprima'},
+    {name : 'inconsolata'},
+    {name : 'inika'},
+    {name : 'istok-web'},
+    {name : 'jim-nightshade'},
+    {name : 'josefin-slab'},
+    {name : 'kameron'},
+    {name : 'kaushan-script'},
+    {name : 'kotta-one'},
+    {name : 'krona-one'},
+    {name : 'la-belle-aurore'},
+    {name : 'lato'},
+    {name : 'league-gothic'},
+    {name : 'lekton'},
+    {name : 'linden-hill'},
+    {name : 'lobster-two'},
+    {name : 'lobster'},
+    {name : 'lusitana'},
+    {name : 'm-1c'},
+    {name : 'm-1m'},
+    {name : 'marck-script'},
+    {name : 'marvel'},
+    {name : 'maven-pro'},
+    {name : 'merienda-one'},
+    {name : 'merriweather'},
+    {name : 'mr-bedfort'},
+    {name : 'mr-de-haviland'},
+    {name : 'mrs-saint-delafield'}
   ]);
 
   var fontsView = new App.Views.Fonts({collection : fontsCollection});
