@@ -133,6 +133,13 @@
 
     events : {
       'click a' : 'scrollTo',
+      'keyup input' : 'updateText'
+    },
+
+    updateText : function(e) {
+      var input = $(e.currentTarget);
+
+      $('textarea').html(input.val());
     },
 
     /**

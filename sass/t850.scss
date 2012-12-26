@@ -143,14 +143,32 @@ body[data-theme='t850'] {
       }
     }
 
+    input {
+      font-size:.85em;
+      border:none;
+      height:1.6em;
+      margin-right:1em;
+      margin-bottom:.35em;
+      background:rgba(255, 255, 255, .1);
+      outline: none;
+      color:rgba(255, 255, 255, .4);
+      padding:0 0 0 .25em;
+
+      &:focus {
+        background:rgba(0, 0, 0, .9);
+        color:#fff;
+      }
+    }
+
+    a.title {
+      color:#fff;
+    }
+
     .counter {
       font-weight:bold;
     }
 
     div:nth-child(2) {
-    }
-
-    div:nth-child(3) {
       text-align: right;
     }
   }
