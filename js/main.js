@@ -135,9 +135,13 @@
     },
 
     updateText : function(e) {
-      var input = $(e.currentTarget);
+      var value = $(e.currentTarget).val();
 
-      $('textarea').html(input.val());
+      // Prevent XSS
+      value = value.replace(/</g, "&lt;");
+      value = value.replace(/>/g, "&gt;");
+
+      $('textarea').html(value);
     },
 
     /**
