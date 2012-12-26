@@ -22,7 +22,7 @@ The fonts are powered by Typekit (Adobe) and this is a UI concept by Tim Pietrus
 
 ## Thanks to my crowd of testers/contributors/issue-posters
 
-Be the first!
+* [Moritz Klack](http://moritzklack.com/)
 
 ---
 
