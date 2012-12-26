@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <title>T-850 - A UI concept to browse Adobe Edge Web Fonts</title>
+  
+  <meta charset="utf-8">
+  <meta name="author" content="Tim Pietrusky">
+  <meta name="robots" content="index,follow">
+  <meta name="revisit-after" content="1 days">
+  <meta name="description" content="Just a simple experiment to provide a solid UI for browsing the Adobe Edge Web Fonts.">
+
+  <meta property="og:title" content="T-850 - A UI concept to browse Adobe Edge Web Fonts">
+  <meta property="og:description" content="Just a simple experiment to provide a solid UI for browsing the Adobe Edge Web Fonts.">
+  <!-- <meta property="og:image" content="http://t-850.com/img/t850.jpg"> -->
+  <meta property="og:url" content="http://t-850.com">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/crystallo-min.css">
+  <link rel="stylesheet" href="css/t850.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="author" href="https://plus.google.com/u/0/112605782451035737058/posts">
+
+</head>
+
+<body id="t850" data-max-width="1024" data-theme="t850" data-auto-extend="true">
+
+  <article data-high="1" data-text="">
+    <section data-cols="1">
+      <div>
+        <h1><b>T-850</b> - Adobe Edge Web Fonts <b>UI</b></h1>
+      </div>
+      <div>
+        <p>
+          Just a simple <a href="https://github.com/TimPietrusky/T-850" target="_blank">experiment</a> to provide a solid UI for browsing the <a href="http://html.adobe.com/edge/webfonts/" target="_blank">Adobe Edge Web Fonts</a>.
+        </p>
+      </div>
+      
+      <div>
+        <h3>What do you think?</h3>
+        <p>Drop a message on <a href="http://timpietrusky.com/t-850-adobe-edge-web-fonts-ui" target="_blank">my blog</a> or an <a href="https://github.com/TimPietrusky/T-850" target="_blank">issue on GitHub</a>.</p>
+      </div>
+      
+      <div>
+        <h3>Disclaimer</h3>
+        <p>
+          The fonts are <b>powered by Typekit (Adobe)</b> and this is a <b>UI concept</b> by <a href="http://twitter.com/TimPietrusky" target="_blank">Tim Pietrusky</a> (built on <a href="http://backbonejs.org/" target="_blank">Backbone.js</a> & <a href="http://timpietrusky.github.com/crystallo/" target="_blank">crystallo</a>). 
+        </p>
+      </div>
+    </section>
+  </article>
+  
+  <div class="fonts"></div>
+
+<!-- Your Icon Fonts -->
+  <article id="output" data-high="5">
+    <section data-cols="1">
+      <div>
+        <h2>Your Collection</h2>
+      </div>
+    </section>
+    
+    <section data-name="output" data-cols="1">
+      <div>
+      </div>
+    </section>
+  </article>
+      
+<!-- Social & Feedback -->
+  <article data-high="4">
+    <section data-cols="3">
+      <div>
+        <a href="https://github.com/TimPietrusky/T-850" target="_blank">
+          <button data-type="2">
+            Fork
+            <span class="zocial-github">
+            me
+          </button>
+        </a>
+      </div>
+      <div>
+        <a href="http://twitter.com/share?text=T-580+-+A+UI+concept+to+browse+the+Adobe+Edge+Web+Fonts+by+@TimPietrusky&url=http://t-850.com" target="_blank">
+          <button data-type="1">
+            Spread
+            <span class="zocial-twitter"></span>
+            the word
+          </button>
+        </a>
+      </div>
+      <div>
+        <a href="mailto:fheyho@timpietrusky.com" target="_blank">
+          <button data-type="3">
+            <span class="zocial-email"></span>
+            Feedback
+          </button>
+        </a>
+      </div>
+    </section>
+  </article>
+  
+<!-- Top & Handcrafted -->
+  <article data-high="3">
+    <section data-cols="1">
+      <div>
+        <footer>
+          <p>
+            <a href="#t850"><span class="iconicfill iconic-arrow-up"></span> top</a>
+          </p>
+          
+          <hr>
+          
+          <p>
+            Handcrafted 2012 by <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a> in Germany.
+          </p>
+        </footer>
+      </div>
+    </section>
+  </article>  
+
+
+<!-- fontTemplate -->
+  <script id="fontTemplate" type="text/template">
+    <section data-cols="2">
+      <div data-width='70'>
+        <textarea style="font-family: <%= name %>, serif;" spellcheck="false">May the force be with you!</textarea>
+      </div>
+      <div data-width='30'>
+        <section data-cols="2">
+          <div>
+            <h2><%= family %></h2>
+          </div>
+          <div>
+            <button data-high="2" data-collection="<%= name %>">add</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </script>
+
+<!-- creatorTemplate -->
+  <script id="creatorTemplate" type="text/template">
+    <article>
+      <section data-cols="3">
+        <div>
+        <b>T-850</b>
+        </div>
+        <div>
+         &nbsp;
+        </div>
+        <div>
+<a href="#output"><span class="entypo-install"></span> Collection: <span class="counter">0</span></a>
+        </div>
+      </section>
+    </article>
+  </script>
+
+  <script id="outputTemplate" type="text/template">
+    Add fonts to your collection!
+  </script>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.js"></script>
+  <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+  <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+
+    <script src="http://use.edgefonts.net/abril-fatface;acme;alegreya-sc;alegreya;alexa-std;amaranth;andika;anonymous-pro;arvo;asap;berkshire-swash;bree-serif;brush-script-std;chunk;cousine;crete-round;droid-sans-mono;lobster;droid-sans;droid-serif;ewert;fusaka-std;gentium-basic;gentium-book-basic;giddyup-std.js"></script>
+    <script src="http://use.edgefonts.net/gravitas-one;hobo-std;holtwood-one-sc;imprima;inconsolata;inika;istok-web;jim-nightshade;josefin-slab;kameron;kaushan-script;kotta-one;krona-one;la-belle-aurore;lato;league-gothic;lekton;linden-hill;lobster-two;lusitana;m-1c;m-1m;marck-script;marvel;maven-pro;merienda-one;merriweather;mr-bedfort;mr-de-haviland;mrs-saint-delafield.js"></script>
+</body>
+
+</html>

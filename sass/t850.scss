@@ -1,0 +1,353 @@
+/* theme */
+@import "compass/css3/images";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+$bg_body: #fff;
+
+html,
+body {
+  width:100%;
+  height:100%;
+}
+
+* {
+  &::-moz-selection,
+  &::selection { 
+    color: #fff;
+    background: rgba(0, 0, 0, .9);
+  } 
+}
+
+body[data-theme='t850'] {
+  font: 1.2em/1.4em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+  background-color:$bg_body;
+
+  [class*="entypo-"]:before {
+    font-family:'entypo', sans-serif;
+  }
+  
+  h1 {
+    font: 2.45em/1.55em 'droid-sans', sans-serif;
+    margin:.4em 0;
+
+    b {
+      color:rgba(44, 51, 44, .8);
+    }
+  }
+
+  h2 {
+    font-size: 1.85em;
+    color:rgba(0, 0, 0, .8);
+    padding:0 0 .5em 0;
+    margin:.25em 0 .5em 0;
+  }
+
+  h3 {
+    font: 1.35em/1.3em 'Chau Philomene One', sans-serif;
+    font-weight:normal;
+    letter-spacing:.05em;
+    margin:1.15em 0 .75em 0;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    text-decoration:none;
+    color:#4166B5;
+    border-bottom:.1em solid rgba(255, 255, 255, .3);
+    padding-bottom:.15em;
+    @include transition(all .3s ease-in-out);
+  }
+
+  a:hover {
+    border-bottom:.1em solid #4166B5;
+  }
+
+  p, ul {
+    margin:.25em 0 .45em 0;
+  }
+
+  hr {
+    background:none;
+    border:none;
+    border-bottom:0.15em  solid rgba(255, 255, 255, .2);
+    margin:2.15em 0 1.75em 0;
+  }
+
+  button {
+    font: 1.1em/1.25em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    background:#ddd;
+    color:#777;
+    border:none;
+    height:3em;
+    @include transition(all .3s ease-in-out);
+    @include user-select(none);
+
+    &:hover {
+      color:#fff;
+      background:rgba(0, 0, 0, .9);
+    }
+  }
+
+  button[data-width="50"] {
+    width:50%;
+  }
+
+  button[data-width="33"] {
+    width:33.3%;
+  }
+
+  button[data-high='1'] {
+    background: hsla(60, 90%, 60%, .7);
+  }
+
+  button[data-high='2'] {
+  }
+
+  button[data-high='3'] {
+    background: hsla(360, 90%, 60%, .7);
+    color:#fff;
+  }
+
+  nav {
+    position:fixed;
+    z-index:5;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:2em;
+    font-size:1.5em;
+    line-height:1.5em;
+    color:#fff;
+    padding:.35em .35em .15em .35em;
+    background:rgba(0, 0, 0, .8);
+    @include transition(all .3s ease-in-out);
+
+    &.add {
+      background:rgba(92, 245, 61, .7);
+    }
+
+    &.remove {
+      background:rgba(245, 61, 61, .7);
+    }
+
+    a {
+      color:rgba(255, 204, 5, .7);
+      border:none;
+
+      &:hover {
+        color:rgba(255, 204, 5, 1);
+        border:none;
+      }
+    }
+
+    .counter {
+      font-weight:bold;
+    }
+
+    div:nth-child(2) {
+    }
+
+    div:nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  footer {
+    margin:2em 0 3em 0;
+  }
+
+  article {
+    margin-top: 0;
+  }
+
+  article[data-high] {
+    margin-bottom:2em;
+  }
+
+  article[data-text] {
+    margin-top:4em;
+  }
+
+  article[data-text]:after {
+    content:attr(data-text);
+    top:.75em;
+    left:auto;
+    left:.25em;
+    color:rgba(0, 0, 0, 0);
+    font-size:9em;
+    z-index:-1;
+    text-shadow:0 0 .065em rgba(0, 0, 0, .7);
+  }
+
+  article[data-high="1"],
+  article[data-high="5"] {
+  }
+
+  .fonts {
+    article:nth-child(2n) {
+      background-color:rgba(230, 230, 230, .4);
+    }
+  }
+
+  article[data-high="2"] {
+    padding:1em 0 0 0;
+    border-top:.25em solid rgba(0, 0, 0, .1);
+    margin:0;
+
+    background-color:#fff;
+
+    textarea {
+      width:100%;
+      font-size:2em;
+      border:none;
+      border-right:.15em solid rgba(0, 0, 0, .025);
+      padding:.5em 0 .5em 0;
+      height:2.5em;
+      background:rgba(255, 255, 255, 0);
+      overflow:hidden;
+
+      &:focus {
+        background:rgba(0, 0, 0, .9);
+        color:#fff;
+      }
+    }
+
+    h2 {
+      color:rgba(0, 0, 0, .4);
+      font-size: 1.15em;
+      font-weight: normal;
+      padding:0 0 .5em 0;
+      margin:.25em 0 .5em 0;
+      text-transform:capitalize;
+    }
+
+    section[data-cols="2"] {
+      div:nth-child(1) {
+        text-align: right;
+        padding-right:1em;
+        line-height:3em;
+      }
+
+      div:nth-child(2) button {
+        float: left;
+      }
+    }
+  }
+
+  article[data-high="4"] {
+    div {
+      padding:1.5em 1em;
+    }
+
+    a {
+      border:none;
+    }
+  }
+
+  article[data-high="5"] {
+    border-top:1em solid rgba(0, 0, 0, .9);
+    border-bottom:1em solid rgba(0, 0, 0, .9);
+    padding:1em 0 1em 0;
+    background: #FFCC05;
+
+    section {
+      padding-top:1em;
+      background:rgba(255, 255, 255, .4);
+    }
+  }
+
+  section {
+    padding: 0 1em;
+  }
+
+  section > div {
+    display:block;
+    padding:0;
+  }
+
+  section[data-valign='center'] {
+    text-align:center;
+  }
+
+  section[data-valign='right'] {
+    text-align:right;
+  }
+
+  section[data-cols='2'] > div[data-width='70'] {
+    width:70%;
+  }
+
+  section[data-cols='2'] > div[data-width='30'] {
+    width:30%;
+  }
+
+  section[data-name='output'] {
+    pre {
+      font-family:'Source Code Pro', monospace;
+      margin:0;
+      background:rgba(255, 255, 255, .1);
+      padding:.85em .25em 0 .85em;
+      white-space: pre-wrap;
+      color: rgba(0, 0, 0, 1);  
+      line-height: 1.75em;
+
+      span {
+        color:rgba(193, 31, 36, .9);
+        font-weight:bold;
+
+        &.url {
+          color:rgba(0, 62, 102, .9);
+        }
+
+        &.css {
+          color:rgba(200, 60, 0, .9);
+        }
+      }
+    }
+  }
+
+  footer {
+    color:rgba(0, 0, 0, .7);
+    font: 1.25em 'Text Me One', sans-serif;
+  }
+}
+
+/* "normal" screens */
+@media screen and (max-width: 79em) {
+  body[data-theme='weloveiconfonts'] {
+    section,
+    footer {
+      padding: 0 .75em;
+    }
+  }
+}
+
+/* "small" screens */
+@media screen and (max-width: 66em) {
+  body[data-theme='t850'] {
+
+    font-size:.925em;
+
+    h1 {
+      font-size:2.3em;
+    }
+
+    article[data-high="2"] {
+      textarea {
+        border:none;
+      }
+    }
+
+    section > div {
+      padding: 0 .5em;
+    }
+
+    section[data-cols='2'] > div[data-width='70'],
+    section[data-cols='2'] > div[data-width='30'] {
+      width:100%;
+    }
+  }
+}
